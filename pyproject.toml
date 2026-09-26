@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airgap-audit-breaker"
+version = "1.0.0"
+description = "Deterministic runtime engine and physical air-gap verification sentinel exposing fake air-gaps, hidden basebands, telemetry queues, and Big 4 / C3PAO CMMC compliance theater."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Ahmed Hassan", email = "ahmed.hassan@a2zsoc.com" }
+]
+keywords = [
+    "air-gap",
+    "cmmc",
+    "cmmc-level-2",
+    "nist-800-171",
+    "defense-security",
+    "zero-trust",
+    "baseband",
+    "ipmi",
+    "telemetry-quarantine",
+    "local-ai",
+    "sovereignty",
+    "audit-theater",
+    "c3pao",
+    "a2zsoc",
+    "aerospace"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Security",
+    "Topic :: System :: Networking",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = []
+
+[project.scripts]
+airgap-breaker = "cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["airgap_audit_breaker*"]
